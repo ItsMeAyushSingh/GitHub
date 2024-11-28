@@ -1,7 +1,23 @@
-function removeDuplicate(){
-    //implement this function
-    let arr = [1,1,1,42,2,3,2,42,42,7,7,7,4,5];
-    return arr;
+class Combinatorics {
+    constructor(num,r){
+          this.num = num;
+          this.r = r;
+    }
+    factorial = (n) => {
+          if(n <= 1) return 1;
+          return n * this.factorial(n-1);
+    }
+    findCombinations = () => {
+          if(this.r > this.num) return 0;
+          return (this.factorial(this.num)/this.factorial(this.num - this.r) * this.factorial(this.r));
+          
+    }
+    findPermutations = () => {
+        if(this.r > this.num) return 0;
+        return (this.num.factorial()/(this.num - this.r).factorial());
+    }
 }
-let ans = removeDuplicate();
-console.log(...ans)
+const comb = new Combinatorics(5,3);
+console.log(comb.factorial());
+console.log(comb.findCombinations());
+console.log(comb.findPermutations());
