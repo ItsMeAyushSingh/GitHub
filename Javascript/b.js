@@ -1,2 +1,6 @@
-const xSquaredEven = (x) => ((x*x)%2===0 ? true : false);
-console.log(xSquaredEven(4));
+let obj = {
+    name: "Ayush",
+    age: 18
+}
+obj.name = "anisha";
+console.log(obj);
